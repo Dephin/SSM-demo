@@ -1,4 +1,4 @@
-package springmvc.model;
+package com.example.springmvc.model;
 
 public class UserModel {
     private String username;

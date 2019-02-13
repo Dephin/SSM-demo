@@ -1,12 +1,13 @@
-package springmvc.controller;
+package com.example.springmvc.controller;
 
+import com.example.springmvc.model.UserModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-import springmvc.model.UserModel;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class HelloController {
@@ -76,6 +77,30 @@ public class HelloController {
     @RequestMapping("/display_data")
     public String displayData(Model model) {
         model.addAttribute("item", "Wahhhh");
+        return "display";
+    }
+
+    @RequestMapping("/display_data2")
+    public String displayData2(Model model) {
+        UserModel userModel = new UserModel();
+        userModel.setUsername("Jane");
+        userModel.setPassword("123456");
+        model.addAttribute("user", userModel);
+        return "display";
+    }
+
+    @RequestMapping("/display_data3")
+    public String displayData3(Model model) {
+        List<UserModel> userModelList = new ArrayList<>();
+        UserModel userModel = new UserModel();
+        userModel.setUsername("Lee");
+        userModel.setPassword("lee1234567");
+        userModelList.add(userModel);
+        UserModel userModel2 = new UserModel();
+        userModel2.setUsername("Sam");
+        userModel2.setPassword("sam1234567");
+        userModelList.add(userModel2);
+        model.addAttribute("userList", userModelList);
         return "display";
     }
 
