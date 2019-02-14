@@ -11,7 +11,7 @@
 <c:out value="${null}" default="is null"/><br>
 <c:out value="${user.username}"/><br>
 <c:out value="${user.getPassword()}"/><br>
-<c:forEach items="${userList}" var="userItem">
+<c:forEach items="${userList}" var="userItem" >
     <c:out value="${userItem.username}"></c:out><br>
     <c:out value="${userItem.password}"></c:out><br>
 </c:forEach>

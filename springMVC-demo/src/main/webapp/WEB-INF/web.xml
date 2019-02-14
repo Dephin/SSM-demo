@@ -11,7 +11,7 @@
     <!--加载 springMVC 外要注入的spring配置文件-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext.xml</param-value>
+        <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
     <!--处理post乱码问题-->
