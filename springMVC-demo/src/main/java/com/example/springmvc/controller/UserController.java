@@ -19,26 +19,26 @@ public class UserController {
         return "user";
     }
 
-    @RequestMapping("/show_users")
-    public String showUsers(Model model){
-        List<UserInfo> userInfoList = userService.selectUserList();
-        model.addAttribute("userList", userInfoList);
-        return "user";
-    }
-
-    @RequestMapping("/add_user")
-    public String addUser(Model model, String username, String password){
-        String addResult = userService.addUser(username, password);
-        model.addAttribute("addResult", addResult);
-        return "user";
-    }
-
-    @RequestMapping("/search_user")
-    public String searchUser(Model model, String username){
-        UserInfo userInfo = userService.searchUser(username);
-        model.addAttribute("searchResult", userInfo);
-        return "user";
-    }
+//    @RequestMapping("/show_users")
+//    public String showUsers(Model model){
+//        List<UserInfo> userInfoList = userService.selectUserList();
+//        model.addAttribute("userList", userInfoList);
+//        return "user";
+//    }
+//
+//    @RequestMapping("/add_user")
+//    public String addUser(Model model, String username, String password){
+//        String addResult = userService.addUser(username, password);
+//        model.addAttribute("addResult", addResult);
+//        return "user";
+//    }
+//
+//    @RequestMapping("/search_user")
+//    public String searchUser(Model model, String username){
+//        UserInfo userInfo = userService.searchUser(username);
+//        model.addAttribute("searchResult", userInfo);
+//        return "user";
+//    }
 
 
 }
